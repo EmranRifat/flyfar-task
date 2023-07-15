@@ -9,7 +9,6 @@ const Main = () => {
             <Outlet/>
          </div>
             <div className=''>
-            <Sidebar/>
             </div>
         </div>
     );
