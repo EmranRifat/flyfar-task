@@ -16,9 +16,9 @@ const Home = () => {
   let content = null;
   if (flight === "DacToJfk") {
     content = (
-      <>
+      <div className="md:flex">
         <Dac />
-        <div className="w-42 px-12 mt-4 flex flex-col">
+        <div className="w-42 px-12 mt-4 md:flex flex-col">
           <button onClick={() => setFlight("DacToJfk")}>
             <FaPlane
               className={`text-6xl ${
@@ -35,14 +35,14 @@ const Home = () => {
           </button>
         </div>
         <Jfk />
-      </>
+      </div>
     );
   }
   if (flight === "JfkToDac") {
     content = (
-      <>
+      <div className="md:flex">
         <Jfk />
-        <div className="w-42 px-12 mt-4 flex flex-col">
+        <div className="w-42 px-12 mt-4 md:flex flex-col">
           <button onClick={() => setFlight("DacToJfk")}>
             <FaPlane
               className={`text-6xl ${
@@ -59,13 +59,14 @@ const Home = () => {
           </button>
         </div>
         <Dac />
-      </>
+      </div>
     );
   }
 
   return (
-   <div>
-     <div className="mt-4 max-w-full md:flex">
+   <div className="">
+
+     <div className="mt-4 md:flex">
       <div className="card text-left  card-side   bg-base-100 ">
         <div className="w-42 pr-8">
           <img className="h-9" src={logo} alt="" />
